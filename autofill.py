@@ -29,10 +29,10 @@ driver.get('https://degree.rgpvexam.in/#/login')
 time.sleep(3)
 
 # Entering the username
-driver.find_element(by=By.NAME, value='enrollment_number').send_keys('0201CS201031')
+driver.find_element(by=By.NAME, value='enrollment_number').send_keys('0201EE211048')
 
 # Entering the password
-driver.find_element(by=By.NAME, value='password').send_keys('2sPBj.uz4D*MF//') # 'Omnamashivay@1')
+driver.find_element(by=By.NAME, value='password').send_keys('<password>')
 
 # Click login button
 driver.find_element(by=By.XPATH, value="//button[@type='submit']").click()
@@ -64,10 +64,10 @@ select_ques = [
 ]
 
 fill_ques = {
-    'Name_of_Student': 'Harshit Mehra',
+    'Name_of_Student': 'Abhishek Pandey',
     'State_of_Domicile': 'Madhya Pradesh',
     'Nationality_if_other_than_Indian': 'Indian',
-    'Year_of_Joining': '2020',
+    'Year_of_Joining': '2022',
 }
 
 # Part 1
@@ -76,7 +76,7 @@ for key, value in fill_ques.items():
 
 Select(driver.find_element(by=By.ID, value='Please_confirm_this_is_the_first_and_only_time_you_answer_this_survey')).select_by_visible_text('Yes')
 Select(driver.find_element(by=By.ID, value='What_degree_program_are_you_pursuing_now')).select_by_visible_text("Bachelor's")
-Select(driver.find_element(by=By.ID, value='Category')).select_by_visible_text('SC')
+Select(driver.find_element(by=By.ID, value='Category')).select_by_visible_text('General')
 
 # Part 2
 for i in select_ques:
